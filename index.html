@@ -58,11 +58,23 @@
         });
     }
 
+    function fbLogoutUser() {
+        FB.getLoginStatus(function(response) {
+            if (response && response.status === 'connected') {
+                FB.logout(function(response) {
+                    document.location.reload();
+                });
+            }
+        });
+    }
+
 </script>
 <!-- New Entry -->
 
 <fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
+
+<button onclick="fbLogoutUser()">Logout</button>
 
 <div id="status">
 </div>
