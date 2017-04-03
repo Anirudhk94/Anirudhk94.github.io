@@ -39,10 +39,8 @@
         console.log('statusChangeCallback');
         console.log(response);
         if (response.status === 'connected') {
-            location.reload();
             testAPI();
         } else {
-            location.reload();
             document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
         }
     }
