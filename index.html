@@ -48,7 +48,6 @@
     function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', NULL, {fields: 'email'}, function(response) {
-        console.log('Response Object : ' + JSON.parse(response));
         console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + '!';
