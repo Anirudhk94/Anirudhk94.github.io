@@ -47,8 +47,8 @@
 
     function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', 'get', { access_token: token, fields: 'id,name,gender' }, function(response) {
-        console.log('Successful login for: ' + JSON.parse(response));
+        FB.api('/me', 'get', {fields: 'id,name,gender' }, function(response) {
+        console.log('Successful login for: ' + response);
         document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.gender + '!';
         });
