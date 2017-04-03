@@ -50,9 +50,9 @@
         FB.api('/me', 'get', {fields: 'id,name,gender,email,first_name,last_name' }, function(response) {
         console.log('Successful login for: ' + response.id);
         console.log('Gender : ' + response.gender);
-        console.log('Email : ' + response.name);
-        console.log('First Name : ' + response.name);
-        console.log('Last Name : ' + response.name);
+        console.log('Email : ' + response.email);
+        console.log('First Name : ' + response.first_name);
+        console.log('Last Name : ' + response.last_name);
         document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + '!';
         });
