@@ -39,8 +39,10 @@
         console.log('statusChangeCallback');
         console.log(response);
         if (response.status === 'connected') {
+            location.reload();
             testAPI();
         } else {
+            location.reload();
             document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
         }
     }
@@ -63,9 +65,6 @@
 
 <fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
-
-<button id="logout" onclick="FB.logout()">Logout</button>
-
 
 <div id="status">
 </div>
