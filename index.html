@@ -47,10 +47,10 @@
 
     function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', 'get', { access_token: token, fields: 'id,name,gender,email' }, function(response) {
+        FB.api('/me', 'get', { access_token: token, fields: 'id,name,gender' }, function(response) {
         console.log('Successful login for: ' + JSON.parse(response));
         document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.email + '!';
+            'Thanks for logging in, ' + response.gender + '!';
         });
     }
 
